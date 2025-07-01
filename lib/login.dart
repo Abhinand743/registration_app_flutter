@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginapp/signup.dart';
 
 class Logpage extends StatelessWidget {
   const Logpage({super.key});
@@ -71,7 +72,7 @@ class Logpage extends StatelessWidget {
                       style: TextStyle(fontSize: 10),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Signup(),));},
                       child: const Text(
                         "sign up",
                         style: TextStyle(fontSize: 14),
