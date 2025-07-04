@@ -1,8 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:loginapp/login.dart';
 
-class Signup extends StatelessWidget {
+class Signup extends StatefulWidget {
   const Signup({super.key});
 
+  @override
+  State<Signup> createState() => _SignupState();
+}
+
+class _SignupState extends State<Signup> {
+  TextEditingController namecontroller=TextEditingController();
+  TextEditingController emailcontroller=TextEditingController();
+  TextEditingController passwordcontroller=TextEditingController();
+  TextEditingController confirmpasswordcontroller=TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,7 +117,7 @@ class Signup extends StatelessWidget {
                   children: [
                     Text("Already have an account?"),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Logpage(),));},
                       child: Text(
                         "Login",
                         style: TextStyle(color: Colors.black),
